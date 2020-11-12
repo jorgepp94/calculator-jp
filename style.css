@@ -1,0 +1,29 @@
+header{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#super-container{
+    margin: 200px auto auto auto;
+    width: 100%;
+}
+#calc-container{
+    width: 450px;
+    margin: auto;
+    text-align: center;
+}
+#screen{
+    padding: 50px;
+    border: 1px solid black;
+    border-bottom: none;
+}
+.buttons{
+    border: 1px solid black;
+}
+.button-gen{
+    width: 50px;
+    height: 50px;
+}
+.button-gen:hover{
+    cursor: pointer;
+}
