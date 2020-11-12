@@ -1,2 +1,2 @@
 # calculator-jp
-Final Project of The Odin Project Foundations
+Final Project of The Odin Project Foundations - JavaScript Lesson
