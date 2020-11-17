@@ -57,6 +57,9 @@ header{
 .button-gen:hover{
     cursor: pointer;
 }
+.button-gen:focus{
+    outline: none;
+}
 #equal-button{
     width: 140px;
     background: linear-gradient(90deg, rgba(65,105,103,1) 0%, rgba(97,215,159,0.9500175070028011) 49%, rgba(23,85,128,1) 100%);
