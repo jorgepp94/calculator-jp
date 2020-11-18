@@ -6,6 +6,9 @@ body{
 header{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    padding-top: 30px;
 }
 
 #super-container{
@@ -31,9 +34,13 @@ header{
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
+#liveNumbers{
+    padding-right: 6px;
+}
 #equalResult{
     font-size: 25px;
     padding-top: 10px;
+    padding-right: 6px;
 }
 .buttons{
     border: 1px solid black;
