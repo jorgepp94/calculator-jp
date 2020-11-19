@@ -12,13 +12,15 @@ header{
 }
 
 #super-container{
-    margin: 100px auto auto auto;
+    margin: 50px auto auto auto;
     width: 100%;
 }
 #calc-container{
     width: 280px;
     margin: auto;
     text-align: center;
+    border: 15px solid dimgray;
+    border-radius: 35px;
 }
 #screen{
     border: 1px solid black;

@@ -89,8 +89,8 @@ document.getElementById("numPoint").addEventListener("click", (e) => {
 //STORING THE NUMBERS
 let counter = "";
 let n;
-let n2=0;
-let result;
+let n2 = 0;
+let result = 0;
 let operation;
 
 function storeNum (x){
@@ -102,29 +102,37 @@ function storeNum (x){
 
 //************Calling the Operators*****************
 
+function operate(op){
+    
+}
 
 //SUM
 document.getElementById("opSum").addEventListener("click", (e) =>{
     let liveOperator = document.createElement("span");
     liveOperator.innerHTML = "+";
-    document.getElementById("liveNumbers").appendChild(liveOperator);
-    n2 = n2 + n;
-    counter = "";
     operation = "+";
+    document.getElementById("liveNumbers").appendChild(liveOperator);
+    //n2 = n2 + n;
+    counter = "";
+    
 });
 
 //REST
 document.getElementById("opRest").addEventListener("click", (e) =>{
     let liveOperator = document.createElement("span");
     liveOperator.innerHTML = "-";
-    document.getElementById("liveNumbers").appendChild(liveOperator);
-    n > n2 ? n2 = n - n2 : n2 = n2 - n;
-    counter = "";
     operation = "-";
+    document.getElementById("liveNumbers").appendChild(liveOperator);
+    //n > n2 ? n2 = n - n2 : n2 = n2 - n;
+    counter = "";
+    
 });
 
 //EQUAL BUTTON RESULT
 document.getElementById("equal-button").addEventListener("click", (e) =>{
+
+
+    /*
     if (operation === "+"){
         result = n+n2;
         let resultsum = document.createElement("div");
@@ -142,5 +150,7 @@ document.getElementById("equal-button").addEventListener("click", (e) =>{
         
         console.log(result);
     }
+
+    */
     
 });
