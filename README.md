@@ -1,2 +1,2 @@
 # calculator-jp
-Final Project of The Odin Project Foundations - JavaScript Lesson
+This is a simple calculator that simulates the one on my phone

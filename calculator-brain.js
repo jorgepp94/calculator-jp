@@ -112,25 +112,25 @@ function storeNum (x){
 
 //************Calling the Operators*****************
 
+
 function operate(var1, var2, op){
     
     if (op === "+"){
-        
         var2 = var2 + var1;
-        let resultsum = document.createElement("div");
-        resultsum.innerHTML = "= " + var2;
-        document.getElementById("equalResult").appendChild(resultsum);
-        console.log(n2);
+        result = var2;
     }
     if (op === "-"){
-        //n > n2 ? result = n - n2 : result = n2 - n;
         var2 = var2 - var1;
-        let resultsum = document.createElement("div");
-        resultsum.innerHTML = "= " + var2;
-        document.getElementById("equalResult").appendChild(resultsum);
-        //console.log(n2);
+        result = var2;
     }
-
+    if (op === "x"){
+        var2 = var2*var1;
+        result = var2;
+    }
+    if (op === "/"){
+        var2 = var2/var1;
+        result = var2;
+    }
     
 }
 
@@ -140,7 +140,7 @@ document.getElementById("opSum").addEventListener("click", (e) =>{
     liveOperator.innerHTML = "+";
     operation = "+";
     document.getElementById("liveNumbers").appendChild(liveOperator);
-    n2 = n;
+    result === 0 ? n2 = n : n2 = result;
     counter = "";
 });
 
@@ -150,33 +150,33 @@ document.getElementById("opRest").addEventListener("click", (e) =>{
     liveOperator.innerHTML = "-";
     operation = "-";
     document.getElementById("liveNumbers").appendChild(liveOperator);
-    n > n2 ? n2 = n - n2 : n2 = n2 - n;
+    result === 0 ? n2 = n : n2 = result;
     counter = "";
 });
 
+//MULTIPLICATION
+document.getElementById("opX").addEventListener("click", (e) =>{
+    let liveOperator = document.createElement("span");
+    liveOperator.innerHTML = "x";
+    operation = "x";
+    document.getElementById("liveNumbers").appendChild(liveOperator);
+    result === 0 ? n2 = n : n2 = result;
+    counter = "";
+});
+
+//DIVISION
+document.getElementById("opDIV").addEventListener("click", (e) =>{
+    let liveOperator = document.createElement("span");
+    liveOperator.innerHTML = "&#247";
+    operation = "/";
+    document.getElementById("liveNumbers").appendChild(liveOperator);
+    result === 0 ? n2 = n : n2 = result;
+    counter = "";
+});
+
+
 //EQUAL BUTTON RESULT
-
-/*
 document.getElementById("equal-button").addEventListener("click", (e) =>{
-    if (operation === "+"){
-        result = n+n2;
-        let resultsum = document.createElement("div");
-        resultsum.innerHTML = "= " + result;
-        document.getElementById("equalResult").appendChild(resultsum);
-        
-        console.log(result);
-    }
-
-    if (operation === "-"){
-        //n > n2 ? result = n - n2 : result = n2 - n;
-        result = n2-n;
-        let resultsum = document.createElement("div");
-        resultsum.innerHTML = "= " + result;
-        document.getElementById("equalResult").appendChild(resultsum);
-        
-        console.log(result);
-    }
-
-    n2=0;
-    n=result;
-});*/
+    let result_op = document.getElementById("live-result");
+    result_op.innerHTML = "= " + result;
+});
