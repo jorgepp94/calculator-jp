@@ -106,11 +106,12 @@ let operation = "";
 function storeNum (x){
     counter = counter + x;
     n = Number(counter);
-    console.log(n);
+    //console.log(n);
 }
 
 
 //************Calling the Operators*****************
+
 
 
 function operate(var1, var2, op){
@@ -118,6 +119,7 @@ function operate(var1, var2, op){
     if (op === "+"){
         var2 = var2 + var1;
         result = var2;
+        
     }
     if (op === "-"){
         var2 = var2 - var1;
@@ -131,7 +133,11 @@ function operate(var1, var2, op){
         var2 = var2/var1;
         result = var2;
     }
-    
+    //Cleaning live numbers
+    if (result!=0){
+        let screenCleaner;
+        console.log(result);
+    }
 }
 
 //SUM
