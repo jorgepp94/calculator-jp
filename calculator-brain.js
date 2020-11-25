@@ -111,11 +111,11 @@ function storeNum (x){
 
 
 //************Calling the Operators*****************
-
+let repeatOP = 0;
 
 
 function operate(var1, var2, op){
-    
+
     if (op === "+"){
         var2 = var2 + var1;
         result = var2;
@@ -133,11 +133,7 @@ function operate(var1, var2, op){
         var2 = var2/var1;
         result = var2;
     }
-    //Cleaning live numbers
-    if (result!=0){
-        let screenCleaner;
-        console.log(result);
-    }
+   console.log(result);
 }
 
 //SUM
@@ -148,6 +144,11 @@ document.getElementById("opSum").addEventListener("click", (e) =>{
     document.getElementById("liveNumbers").appendChild(liveOperator);
     result === 0 ? n2 = n : n2 = result;
     counter = "";
+    if (result != 0){
+        let liveCleaner = document.getElementById("liveNumbers");
+        liveCleaner.innerHTML = result + "+";
+        document.getElementById("equalResult").innerHTML = "";
+    }
 });
 
 //REST
@@ -158,6 +159,11 @@ document.getElementById("opRest").addEventListener("click", (e) =>{
     document.getElementById("liveNumbers").appendChild(liveOperator);
     result === 0 ? n2 = n : n2 = result;
     counter = "";
+    if (result != 0){
+        let liveCleaner = document.getElementById("liveNumbers");
+        liveCleaner.innerHTML = result + "-";
+        document.getElementById("equalResult").innerHTML = "";
+    }
 });
 
 //MULTIPLICATION
@@ -168,6 +174,11 @@ document.getElementById("opX").addEventListener("click", (e) =>{
     document.getElementById("liveNumbers").appendChild(liveOperator);
     result === 0 ? n2 = n : n2 = result;
     counter = "";
+    if (result != 0){
+        let liveCleaner = document.getElementById("liveNumbers");
+        liveCleaner.innerHTML = result + "x";
+        document.getElementById("equalResult").innerHTML = "";
+    }
 });
 
 //DIVISION
@@ -178,11 +189,36 @@ document.getElementById("opDIV").addEventListener("click", (e) =>{
     document.getElementById("liveNumbers").appendChild(liveOperator);
     result === 0 ? n2 = n : n2 = result;
     counter = "";
+    if (result != 0){
+        let liveCleaner = document.getElementById("liveNumbers");
+        liveCleaner.innerHTML = result + "&#247";
+        document.getElementById("equalResult").innerHTML = "";
+    }
 });
 
 
 //EQUAL BUTTON RESULT
 document.getElementById("equal-button").addEventListener("click", (e) =>{
-    let result_op = document.getElementById("live-result");
-    result_op.innerHTML = "= " + result;
+    let result_op = document.getElementById("equalResult");
+    if (result%1!=0){
+        result_op.innerHTML = "= " + result.toFixed(3);
+    }else{
+        result_op.innerHTML = "= " + result;
+    }
+    document.getElementById("liveNumbers").innerHTML = "";
+    counter = "";
+    operation = "";
+    repeatOP = 1;
+});
+
+//CLEANER
+
+
+document.getElementById("btn-cleaner").addEventListener("click", (e) =>{
+    result = 0;
+    n2 = 0;
+    counter = "";
+    operation = "";
+    document.getElementById("liveNumbers").innerHTML = "";
+    document.getElementById("equalResult").innerHTML = "";
 });
