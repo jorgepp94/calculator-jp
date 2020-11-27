@@ -1,7 +1,8 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: #e2e5de;
+    background: linear-gradient(90deg, rgba(65,105,103,1) 0%, rgba(97,215,159,0.9500175070028011) 49%, rgba(23,85,128,1) 100%);
+};
 }
 header{
     font-family: Arial, Helvetica, sans-serif;
@@ -72,4 +73,7 @@ header{
 #equal-button{
     width: 140px;
     background: linear-gradient(90deg, rgba(65,105,103,1) 0%, rgba(97,215,159,0.9500175070028011) 49%, rgba(23,85,128,1) 100%);
+}
+#btn-cleaner{
+    width: 140px;
 }
